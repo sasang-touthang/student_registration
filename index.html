@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sasang Touthang" />
+    <meta
+      name="description"
+      content="This is a student registration system that allows users to input their details. The details can be updated or deleted."
+    />
+    <title>User Data Table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="readAll()">
+    <section class="container">
+      <h1>Student Registration Center</h1>
+      <p>
+        This is a student registration center. Please fill in your details and
+        click on the submit button. You can also update or delete your
+        information later.
+      </p>
+      <!-- Student Registration Form -->
+      <form action="#" onsubmit="create()" class="entry">
+        <input
+          type="text"
+          class="student_name"
+          placeholder="Student Name"
+          required
+        />
+        <input
+          type="number"
+          class="student_id"
+          placeholder="Student Id"
+          required
+        />
+        <input type="number" class="contact" placeholder="Contact" required />
+        <input type="email" class="email" placeholder=" Email" required />
+
+        <input type="submit" value="Submit" />
+      </form>
+      <!-- Updation form -->
+      <form onsubmit="update()" class="update">
+        <input type="text" class="uname" placeholder="Student Name" />
+        <input type="number" class="uid" placeholder="Student Id" />
+        <input type="text" class="ucontact" placeholder="Contact" />
+        <input type="text" class="uemail" placeholder="Email" />
+        <input type="submit" value="Update" />
+      </form>
+
+      <!-- Student Registration table -->
+      <table class="list" id="studentList">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Student Id</th>
+            <th>Contact no</th>
+            <th>Email Id</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody class="data_table"></tbody>
+      </table>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
